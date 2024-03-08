@@ -39,11 +39,12 @@ nav ul li a {
 
 .myAccount {
     display: flex;
+    justify-content: center; /* Center horizontally */
+    padding: 10px;
 }
 
-
-
 .myAccount button {
+    align-items: center;
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -54,39 +55,54 @@ nav ul li a {
 
 /* Hero section styles */
 .hero {
-    background-image: url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+    position:relative;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
+/* Hero background images */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 10s infinite alternate;
+}
+
+/* Define keyframes for background image slideshow */
+@keyframes slideshow {
+    0%, 100% {
+        background-image: url('carousal1.png');
+    }
+    50% {
+        background-image: url('carousal2.jpeg');
+    }
+}
+
+/* Add styles for hero content */
 .hero-content {
-    text-align: center;
     z-index: 1;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.244);
-    border: 2px solid #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    backdrop-filter: blur(3px);
+    text-align: center;
     color: #fff;
-    font-weight: 600;
 }
 
-.hero h1 {
+.hero-content h1 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.hero p {
+.hero-content p {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-.btn {
+.hero-content .btn {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -95,24 +111,37 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.hero-content .btn:hover {
     background-color: #0056b3;
 }
-/*hero carousal*/
-.carousel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure the carousel is behind the hero content */
-}
-.carousel-item img{
-    height: 100vh;
-    object-fit:cover;
-    object-position: center;
+
+
+/* Custom styles for each section */
+
+/* Add styles for home section */
+#home {
+    padding-top: 70px; /* Adjust the padding-top to create space below the navigation bar */
 }
 
+#home-section {
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
+
+#session-calendar-section {
+    background-color: #e6f5ff;
+    transition: background-color 0.5s ease;
+}
+
+#news-events-section {
+    background-color: #fff0f0;
+    transition: background-color 0.5s ease;
+}
+
+#contact-us-section {
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
 
 /* Footer styles */
 footer {
@@ -155,7 +184,8 @@ footer {
     }
 
     .myAccount {
-        margin-top: 10px;
+        justify-content: center; /* Center horizontally */
+        margin-top: 10px; /* Add some top margin for spacing */
     }
 
     nav ul {
@@ -181,8 +211,8 @@ footer {
     }
 
     .myAccount {
-        flex-direction: column;
-        align-items: stretch;
+        justify-content: center; /* Center horizontally */
+        margin-top: 10px; /* Add some top margin for spacing */
     }
 
     .myAccount input[type="text"] {
