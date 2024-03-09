@@ -18,7 +18,35 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+/*navbar styles*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333333cc;
+    z-index: 1000;
+    border-bottom: 1px solid white;
+    backdrop-filter: blur(5px);
 
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* Display menu items vertically when hamburger menu is activated */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+#logo{
+    font-size: 24px;
+    color: black;
+}
 
 nav ul {
     list-style: none;
@@ -27,63 +55,96 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 20px;
+    transition: .3s;
+    margin: 0 20px;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: 600;
+}
+nav ul li a:hover{
+    color: white;
 }
 
 .myAccount {
     display: flex;
+    justify-content: center; /* Center horizontally */
+    padding: 10px;
 }
 
-
-
 .myAccount button {
+    align-items: center;
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 /* Hero section styles */
 .hero {
-    background-image: url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+    position:relative;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
+/* Hero background images */
+.hero-background {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 20s infinite alternate;
+}
+
+/* Define keyframes for background image slideshow */
+@keyframes slideshow {
+    0%, 100% {
+        background-image: url('./images/3.jpg');
+    }
+    25% {
+        background-image: url('./images/2.jpg');
+    }
+    50% {
+        background-image: url('./images/4.jpg');
+    }
+    75% {
+        background-image: url('./images/6.jpg');
+    }
+}
+
+/* Add styles for hero content */
 .hero-content {
-    text-align: center;
     z-index: 1;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.244);
-    border: 2px solid #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    backdrop-filter: blur(3px);
+    text-align: center;
     color: #fff;
-    font-weight: 600;
 }
 
-.hero h1 {
+.hero-content h1 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.hero p {
+.hero-content p {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-.btn {
+.hero-content .btn {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -92,24 +153,37 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.hero-content .btn:hover {
     background-color: #0056b3;
 }
-/*hero carousal*/
-.carousel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure the carousel is behind the hero content */
-}
-.carousel-item img{
-    height: 100vh;
-    object-fit:cover;
-    object-position: center;
+
+
+/* Custom styles for each section */
+
+/* Add styles for home section */
+#home {
+    padding-top: 70px; /* Adjust the padding-top to create space below the navigation bar */
 }
 
+#home{
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
+
+#session{
+    background-color: #e6f5ff;
+    transition: background-color 0.5s ease;
+}
+
+#news{
+    background-color: #fff0f0;
+    transition: background-color 0.5s ease;
+}
+
+#contact{
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
 
 /* Footer styles */
 footer {
@@ -152,7 +226,8 @@ footer {
     }
 
     .myAccount {
-        margin-top: 10px;
+        justify-content: center; /* Center horizontally */
+        margin-top: 10px; /* Add some top margin for spacing */
     }
 
     nav ul {
@@ -178,8 +253,8 @@ footer {
     }
 
     .myAccount {
-        flex-direction: column;
-        align-items: stretch;
+        justify-content: center; /* Center horizontally */
+        margin-top: 10px; /* Add some top margin for spacing */
     }
 
     .myAccount input[type="text"] {
