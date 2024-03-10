@@ -14,6 +14,13 @@
 
     <link rel="stylesheet" href="homepageStyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--calenderFiles-->
+    <link rel="stylesheet" href="./calendarStuff/evo-calendar.min.css">
+    <link rel="stylesheet" href="./calendarStuff/evo-calendar.midnight-blue.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -59,8 +66,13 @@
 
     <!-- session and calender starts here -->
     <section class="session" id="session">
-        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis commodi architecto amet. Distinctio amet a quod est nihil, eligendi quos aperiam dolore. Molestiae soluta veniam vero alias cum sunt veritatis?</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum necessitatibus voluptas laborum reprehenderit labore quaerat doloremque perferendis dignissimos! Adipisci laudantium exercitationem eaque voluptatum expedita, ullam assumenda perferendis facere cupiditate! Consectetur.</p>
+        <div id="calendar_container">
+            <div id="calendar"></div>
+        </div>
+          <!-- Add jQuery library (required) -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>    
+        <script src="./calendarStuff/evo-calendar.min.js"></script> 
+        <script src="./calendarStuff/addEvent.js"></script>
     </section>
 
     <!-- news and events starts here -->
