@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+
+
+section{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    background:url(accountBG.jpg),no-repeat;
+    background-position: center ;
+    background-size: 108%;
+    
+}
+
+.ui-w-80 {
+    width : 80px !important;
+    height: auto;
+    
+}
+
+.account-settings-links .list-group-item {
+    background-color: transparent !important;
+}
+
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn-outline-primary {
+    border-color: #26B4FF;
+    background  : transparent;
+    color       : #26B4FF;
+}
+
+.form-group .form-control{
+    background:transparent;
+    border:2px solid rgba(255,255,255,0.2);
+    outline:none;
+    font-size:16px;
+    
+    border-radius:6px;
+}
+
+
+.btn {
+    cursor: pointer;
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+.btn-twitter{
+    border-color: #26B4FF !important;
+    background  : transparent;
+    color       :#26B4FF !important;
+    
+}
+
+.btn-facebook {
+    border-color:  #26B4FF !important;
+    background  : transparent;
+    color       : #26B4FF !important;
+}
+
+.btn-instagram {
+    border-color:  #26B4FF !important;
+    background  : transparent;
+    color       : #26B4FF !important;
+}
+
+.btn-secondary{
+    border-color: lightcoral;
+    background  : red !important;
+    color       : #26B4FF;
+}
+.wrapper {
+    padding: 5px;
+    background-clip: border-box;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border:2px solid rgba(255,255,255,0.2);
+    box-shadow:0 0 10px rgba(255,255,255,0.2);
+    color: white;
+    
+ 
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position  : absolute;
+    visibility: hidden;
+    width     : 1px;
+    height    : 1px;
+    opacity   : 0;
+}
+
+.account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+    width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+h4{
+    color: white;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+    color: white !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+    color: transparent;
+}
+
+
+.light-style .account-settings-links .list-group-item.active {
+    color:white !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding     : 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
