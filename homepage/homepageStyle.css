@@ -43,6 +43,20 @@ header {
     }
 }
 
+.btnC{
+    background-color: #333;
+    border: 1px solid transparent;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+.btnC:hover{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
 #logo{
     font-size: 24px;
     color: black;
@@ -78,16 +92,7 @@ nav ul li a:hover{
     padding: 10px;
 }
 
-.myAccount button {
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-}
+
 
 /* Hero section styles */
 .hero {
@@ -114,16 +119,16 @@ nav ul li a:hover{
 /* Define keyframes for background image slideshow */
 @keyframes slideshow {
     0%, 100% {
-        background-image: url('./images/3.jpg');
+        background-image: url('../images/3.jpg');
     }
     25% {
-        background-image: url('./images/2.jpg');
+        background-image: url('../images/2.jpg');
     }
     50% {
-        background-image: url('./images/4.jpg');
+        background-image: url('../images/4.jpg');
     }
     75% {
-        background-image: url('./images/6.jpg');
+        background-image: url('../images/6.jpg');
     }
 }
 

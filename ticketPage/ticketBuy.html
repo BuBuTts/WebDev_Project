@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Buy</title>
+    <link rel="stylesheet" href="../myaccount/accountstyles.css">
+    <link rel="stylesheet" href="ticketBuyStyle.css">
+    <!--external cdnjs css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <section>
+        <div class="container light-style flex-grow-1 container-p-y">
+            <h4 class="font-weight-bold py-3 mb-2"><a href="../homepage/homepage.html"><img src="../images/Logo 2New.png" width="60" height="60"></a>&nbsp;Book Your Tickets</h4>
+            <div class="wrapper" >
+                <form action="" method="post">
+                    <!--side bar-->
+                    <div class="row no-gutters row-bordered row-border-10px">
+                        <div class="col-md-3 pt-0">
+                            <div class="list-group list-group-flush account-settings-links">
+                                <a class="list-group-item list-group-item-action active" data-toggle="list"
+                                    href="#booking-general">General</a>
+                                <a class="list-group-item list-group-item-action" data-toggle="list"
+                                    href="#booking-payment">Payment Details</a>
+                                <a class="list-group-item list-group-item-action" data-toggle="list"
+                                    href="#booking-wallet">Ticket Wallet</a>
+                            </div>
+                        </div>
+                        <!--side bar end-->
+                        <div class="col-md-9">
+                            <div class="tab-content">
+                                    <!--general-->
+                                <div class="tab-pane fade active show" id="booking-general">
+                                    <div class="card-body pb-2">
+                                        <h5 class="mb-4">Buyer Details</h5>
+                                        <div class="form-group">
+                                            <label for="name" class="form-label">Name:</label>
+                                            <input type="text" id="name" name="name" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">Email:</label>
+                                            <input type="email" id="email" name="email" class="form-control" required>
+                                        </div>
+                                        <hr class="border-light m-0">
+                                    </div>
+                                    <div class="card-body pb-2">
+                                        <h5 class="mb-4">Ticket Details</h5>
+                                        <div class="form-group">
+                                            <label for="date" class="form-label">Date:</label>
+                                            <input type="date" id="date" name="date" required class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <h6 class="mb-4">Session</h6>
+                                            <input type="radio" class="btn-check" name="session" id="morning" autocomplete="off" value="morning" checked>
+                                            <label class="btn btn-outline-warning" for="morning">Morning Session</label>  
+                                            <input type="radio" class="btn-check" name="session" id="evening" autocomplete="off" value="evening">
+                                            <label class="btn btn-outline-warning" for="evening">Evening Session</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Ticket Type</label>
+                                            <select class="custom-select">
+                                                <option>Children</option>
+                                                <option selected>Normal</option>
+                                                <option>School Children</option>
+                                                <option>Government Institution</option>
+                                                <option>Foriegner</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tickets" class="form-label">Number of Tickets:</label>
+                                            <input type="number" id="tickets" name="tickets" min="1" max="300" required class="form-control" required >
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!--payement-->
+                                <div class="tab-pane fade" id="booking-payment">
+                                    <div class="card-body pb-2">
+                                        <div class="form-group">
+                                            <label for="card_number" class="form-label">Credit Card Number:</label>
+                                            <input type="text" id="card_number" name="card_number"  class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card_name" class="form-label">Cardholder Name:</label>
+                                            <input type="text" id="card_name" name="card_name" required class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="expiry_date" class="form-label">Expiry Date:</label>
+                                            <input type="date" id="expiry_date" name="expiry_date" required class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv" class="form-label">CVV:</label>
+                                            <input type="text" id="cvv" name="cvv" required class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="billing_address" class="form-label">Billing Address:</label>
+                                            <textarea id="billing_address" name="billing_address" rows="4" required class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!--Ticketwallet-->
+                                <div class="tab-pane fade" id="booking-wallet">
+                                    <div class="ticketBox">
+                                        <div class="ticket">
+                                            <!--take from database-->
+                                            <p>Name : John Half</p>
+                                            <p>Email: jhalf@email.com</p>
+                                            <p>Ticket Type : Normal</p>
+                                            <p>Passenger Count : XX</p>
+                                            <p>Date : XXXX-XX-XX</p>
+                                            <p class="font-monospace">jb32674gf29bf4u98264</p>
+                                        </div>
+                                        <div class="ticket">
+                                            <!--take from database-->
+                                            <p>Name : John Half</p>
+                                            <p>Email: jhalf@email.com</p>
+                                            <p>Ticket Type : Normal</p>
+                                            <p>Passenger Count : XX</p>
+                                            <p>Date : XXXX-XX-XX</p>
+                                            <p class="font-monospace" >jb32674gf29bf4u98264</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                    
+                            <!--submit buttons-->
+                            <div class="text-right mt-3">
+                                    <button type="submit" class="btn btn-primary " id="buyButton">Buy</button>&nbsp;
+                                    <button type="button" class="btn btn-secondary " id="cancelButton">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>     
+        </div>
+    </section>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="ticketBuy.js"></script>
+</body>
+</html>
+
+
+<body>
+    
+</body>
+</html>

@@ -11,9 +11,9 @@ section{
     justify-content:center;
     align-items:center;
     min-height: 100vh;
-    background:url(accountBG.jpg),no-repeat;
+    background:url(../images/primeBG.jpg),no-repeat;
     background-position: center ;
-    background-size: 108%;
+    background-size: cover;
     
 }
 
