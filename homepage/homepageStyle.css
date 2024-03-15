@@ -206,6 +206,8 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-links ul {
@@ -221,16 +223,39 @@ footer {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
+    font-family: cursive;
 }
 
-.social-icons img {
-    width: 30px;
-    margin: 0 5px;
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social a{
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    background: transparent;
+    color: cyan;
+    border-radius: 50%;
+    margin: 5px 25px;
+    border: 2px solid transparent;
+    transition: .4s;
+    text-decoration: none;
+    font-size: 20px;
+}
+.social a:hover{
+    border: 2px solid cyan;
+    color: white;
+    transform: scale(1.2);
 }
 
 .contact-info p {
     font-size: 14px;
     margin-bottom: 5px;
+    font-family:cursive;
 }
 
 /* Responsive styles */
