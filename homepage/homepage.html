@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+    include("../loginpage/connection.php");
+    include("../loginpage/functions.php");
+
+    $user_data = check_login($con); 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +67,7 @@
                 </ul>
                 <!-- My Account button -->
                 <div class="myAccount">
-                    <a href=".././myaccount/account.html"><button type="button" class="btnC"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;My Account</button></a>
+                    <a href=".././myaccount/account.php"><button type="button" class="btnC"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;My Account</button></a>
                 </div>
             </div>
         </nav>   
@@ -94,49 +103,54 @@
                 <div class="card-wrapper swiper-wrapper">
                     <div class="card swiper-slide">
                         <div class="card-content">
-                            <h2 class="name">News 01</h2>
+                            <h2 class="name">China is going back to the moon again </h2>
                             <img class="news-img" src="../images/Logo 2New.png">
-                            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto suscipit odit aliquam repellendus iste. Deleniti nihil molestias temporibus sunt fugiat, maxime minus officiis veritatis suscipit, aliquam repellat aut eligendi?</p>
+                            <p class="description">On Friday, May 3rd, the sixth mission in the Chinese Lunar Exploration Program (Chang’e-6) launched from the Wenchang Spacecraft Launch Site in southern China. Shortly after, China announced that the spacecraft separated successfully from its Long March 5 Y8 rocket. The mission, consisting of an orbiter and lander element, is now on its way to the Moon and will arrive there in a few weeks. By June, the lander element will touch down on the far side of the Moon, where it will gather about 2 kg (4.4 lbs) of rock and soil samples for return to Earth.</p>
                             <button class="button">View More</button>
                         </div>
                     </div>
                     <div class="card swiper-slide">
                         <div class="card-content">
-                            <h2 class="name">News 02</h2>
+                            <h2 class="name">Stellar light surrounding ancient quasars</h2>
                             <img class="news-img" src="../images/Logo 2New.png">
-                            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto suscipit odit aliquam repellendus iste. Deleniti nihil molestias temporibus sunt fugiat, maxime minus officiis veritatis suscipit, aliquam repellat aut eligendi?</p>
+                            <p class="description">MIT astronomers have observed the elusive starlight surrounding some of the earliest quasars in the universe. The distant signals, which trace back more than 13 billion years to the universe's infancy, are revealing clues to how the very first black holes and galaxies evolved.</p>
                             <button class="button">View More</button>
                         </div>
                     </div>
                     <div class="card swiper-slide">
                         <div class="card-content">
-                            <h2 class="name">News 03</h2>
+                            <h2 class="name">Hubble views a galaxy with a voracious black hole</h2>
                             <img class="news-img" src="../images/Logo 2New.png">
-                            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto suscipit odit aliquam repellendus iste. Deleniti nihil molestias temporibus sunt fugiat, maxime minus officiis veritatis suscipit, aliquam repellat aut eligendi?</p>
+                            <p class="description">Bright, starry spiral arms surround an active galactic center in a new NASA Hubble Space Telescope image of the galaxy NGC 4951. Located in the Virgo constellation, NGC 4951 is located roughly 50 million light-years away from Earth. It's classified as a Seyfert galaxy, which means that it's an extremely energetic type of galaxy with an active galactic nucleus (AGN).</p>
                             <button class="button">View More</button>
                         </div>
                     </div>
                     <div class="card swiper-slide">
                         <div class="card-content">
-                            <h2 class="name">News 04</h2>
+                            <h2 class="name">Venus has almost no wate : here's why</h2>
                             <img class="news-img" src="../images/Logo 2New.png">
-                            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto suscipit odit aliquam repellendus iste. Deleniti nihil molestias temporibus sunt fugiat, maxime minus officiis veritatis suscipit, aliquam repellat aut eligendi?</p>
+                            <p class="description">Planetary scientists at the University of Colorado Boulder have discovered how Venus, Earth's scalding and uninhabitable neighbor, became so dry.
+The new study fills in a big gap in what the researchers call "the water story on Venus." Using computer simulations, the team found that hydrogen atoms in the planet's atmosphere go whizzing into space through a process known as "dissociative recombination" -- causing Venus to lose roughly twice as much water every day compared to previous estimates.
+</p>
                             <button class="button">View More</button>
                         </div>
                     </div>
                     <div class="card swiper-slide">
                         <div class="card-content">
-                            <h2 class="name">News 05</h2>
+                            <h2 class="name">'Lost' satellite found 25 years</h2>
                             <img class="news-img" src="../images/Logo 2New.png">
-                            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto suscipit odit aliquam repellendus iste. Deleniti nihil molestias temporibus sunt fugiat, maxime minus officiis veritatis suscipit, aliquam repellat aut eligendi?</p>
+                            <p class="description">After 25 years of drifting undetected in space, an experimental satellite that launched in 1974 has been found using tracking data from the U.S. Space Force.
+The Infra-Red Calibration Balloon (S73-7) satellite started its journey into the great unknown after launching on April 10, 1974 through the United States Air Force's Space Test Program. It was originally contained in what was called "The Hexagon System" in which S73-7, the smaller satellite, was deployed from the larger KH-9 Hexagon once in space. S73-7 measured 26 inches wide (66 centimeters) and began its life heading into a 500 mile (800 kilometers) circular orbit.</p>
                             <button class="button">View More</button>
                         </div>
                     </div>
                     <div class="card swiper-slide">
                         <div class="card-content">
-                            <h2 class="name">News 06</h2>
+                            <h2 class="name">Mars may have been more Earth-like </h2>
                             <img class="news-img" src="../images/Logo 2New.png">
-                            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto suscipit odit aliquam repellendus iste. Deleniti nihil molestias temporibus sunt fugiat, maxime minus officiis veritatis suscipit, aliquam repellat aut eligendi?</p>
+                            <p class="description">A collection of rocks scattered on an ancient shoreline on Mars might indicate that the Red Planet was once far more Earth-like than scientists previously thought.
+The rocks, discovered by NASA's Curiosity rover, are unusually rich in manganese oxide — a chemical that adds to growing evidence that the once-habitable Mars may have sported Earth-like oxygen levels and life-friendly conditions early in its history, scientists say.
+</p>
                             <button class="button">View More</button>
                         </div>
                     </div>
@@ -183,8 +197,8 @@
                 <form action="connect.php" method="post" class="form-body">
                 <h1 class="sub-heading">Need Support !</h1>
                 <p class="para para2">Contact us for a quote , help to join the them.</p>
-                <input type="text" class="input" placeholder="your name">
-                <input type="text" class="input" placeholder="your email">
+                <input type="text" class="input" placeholder="your name" value="<?php echo $user_data['f_name'].' '.$user_data['l_name']?>">
+                <input type="text" class="input" placeholder="your email" value="<?php echo $user_data['email']?>">
                 <input type="text" class="input" placeholder="your Subject">
                 <textarea class="input" cols="30" rows="5" placeholder="Your message..."></textarea>
                 <input type="submit" class="input submit" value="Send Message">

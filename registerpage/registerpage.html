@@ -1,3 +1,32 @@
+<?php
+
+    session_start();
+        include("../loginpage/connection.php");
+        include("../loginpage/functions.php");
+
+        if($_SERVER['REQUEST_METHOD']=="POST"){
+
+            //something post
+            $email = $_POST['email'];
+            $f_name = $_POST['f_name'];
+            $l_name = $_POST['l_name'];
+            $phone_number = $_POST['phone_number'];
+            $password = $_POST['password'];
+
+            if(!empty($email) && !empty($f_name) && !empty($l_name) && !empty($phone_number) && !empty($password)){
+
+                //save to db
+                $query = "insert into user (f_name,l_name,email,phone_number,password) values ('$f_name','$l_name','$email','$phone_number','$password')";
+                mysqli_query($con,$query);
+                header("location: ../loginpage/login.php");
+                die;
+            }else{
+                echo "enter valid information";
+            }
+        }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,34 +42,34 @@
 
 <body>
     <div class="wrapper">
-        <form action="">
-            <h1 class='font-weight-bold py-3 mb-2'><a href="../homepage/homepage.html"><img src="../images/Logo 2New.png" width="60" height="60"></a>&nbsp;Registration</h1>
+        <form action="" method="POST">
+            <h1 class='font-weight-bold py-3 mb-2'><a href="../homepage/homepage.php"><img src="../images/Logo 2New.png" width="60" height="60"></a>&nbsp;Registration</h1>
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="First Name" required name="f_name">
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Last Name" required>
+                    <input type="text" placeholder="Last Name" required name="l_name">
                     <i class='bx bxs-user'></i>
                 </div>
             </div>
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="email" placeholder="E-mail" required>
+                    <input type="email" placeholder="E-mail" required name="email">
                     <i class='bx bxs-envelope'></i>
                 </div>
                 <div class="input-field">
-                    <input type="number" placeholder="Phone Number" required>
+                    <input type="number" placeholder="Phone Number" required name="phone_number">
                     <i class='bx bxs-phone'></i>
                 </div>
             </div>
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Password" required name="password">
                     <i class='bx bxs-lock'></i>
                 </div>
                 <div class="input-field">
@@ -52,7 +81,7 @@
             <label><input type="radio">I accept the terms and conditions and privacy policy 
                 statements associated with National Planetarium.</label>
 
-            <a href="../loginpage/login.html"><button type="button" class="btn" >Register</button></a>
+            <a href=""><button type="submit" class="btn" >Register</button></a>
         </form>
     </div>
 

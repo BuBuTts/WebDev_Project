@@ -1,3 +1,32 @@
+<?php
+
+    session_start();
+        include("../loginpage/connection.php");
+        include("../loginpage/functions.php");
+
+        if($_SERVER['REQUEST_METHOD']=="POST"){
+
+            //something post
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $date = $_POST['date'];
+            $session = $_POST['session'];
+            $ticket_type = $_POST['ticket_type'];
+            $no_of_tickets = $_POST['no_of_tickets'];
+
+            if(!empty($name) && !empty($email) && !empty($date) && !empty($session) && !empty($ticket_type) && !empty($no_of_tickets)){
+
+                //save to db
+                $query = "insert into ticket (name,email,date,session,ticket_type,no_of_tickets) values ('$name','$email','$date','$session','$ticket_type','$no_of_tickets')";
+                mysqli_query($con,$query);
+                header("location: ../ticketPage/ticketBuy.php");
+                die;
+            }else{
+                echo "enter valid information";
+            }
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,11 +66,11 @@
                                         <h5 class="mb-4">Buyer Details</h5>
                                         <div class="form-group">
                                             <label for="name" class="form-label">Name:</label>
-                                            <input type="text" id="name" name="name" class="form-control" required>
+                                            <input type="text" id="name" name="name" class="form-control" required name="name">
                                         </div>
                                         <div class="form-group">
                                             <label for="email" class="form-label">Email:</label>
-                                            <input type="email" id="email" name="email" class="form-control" required>
+                                            <input type="email" id="email" name="email" class="form-control" required name="email">
                                         </div>
                                         <hr class="border-light m-0">
                                     </div>
@@ -49,7 +78,7 @@
                                         <h5 class="mb-4">Ticket Details</h5>
                                         <div class="form-group">
                                             <label for="date" class="form-label">Date:</label>
-                                            <input type="date" id="date" name="date" required class="form-control">
+                                            <input type="date" id="date" name="date" required name="date" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <h6 class="mb-4">Session</h6>
@@ -70,7 +99,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="tickets" class="form-label">Number of Tickets:</label>
-                                            <input type="number" id="tickets" name="tickets" min="1" max="300" required class="form-control" required >
+                                            <input type="number" id="tickets" name="tickets" min="1" max="300" required name="no_of_tickets" class="form-control" required >
                                         </div>
                                     </div>
                                 </div>
